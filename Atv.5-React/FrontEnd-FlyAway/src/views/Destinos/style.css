@@ -1,0 +1,44 @@
+.secao_destinos{
+    margin-top: 5%;
+ }
+ 
+ .secao_destinos .container .card:hover{
+    transition: 350ms;
+    box-shadow: 1px 5px 5px #2e2e2e55;
+ }
+ 
+ .card{
+    box-shadow: 1px 5px 5px #2e2e2e23;
+ }
+ 
+ .card-img{
+    height: 250px;
+    object-fit: cover;
+ }
+ 
+ .card-title{
+    font-weight: 700;
+    font-family: 'nunito';
+ }
+ 
+ .card-text{
+    color: rgb(27, 27, 27);
+    font-family: 'lato';
+ }
+ 
+ .btn.btn-outline-success.btn-sm{
+    font-weight: 600;
+    
+ }
+ 
+ .btn.btn-outline-success.btn-sm::before{
+    content: 'R$ ';
+    font-weight: 700;
+    font-size: 18px;
+ }
+ 
+ .btn.btn-outline-success.btn-sm::after{
+    content: ',00';
+    font-size: 11px;
+ }
+ 

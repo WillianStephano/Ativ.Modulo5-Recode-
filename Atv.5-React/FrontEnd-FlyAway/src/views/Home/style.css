@@ -1,0 +1,28 @@
+.fit-cover {
+   object-fit: cover;
+}
+
+.logo img {
+   width: 38px;
+}
+
+.img_intro {
+   background: linear-gradient(
+         144deg,
+         rgba(126, 126, 126, 0.8883928571428571) 0%,
+         rgba(0, 0, 0, 0.9) 100%
+      ),
+      url(../../assets/img/airplaneBg.jpg) center / cover;
+   height: 600px;
+}
+
+.secao_intro .container {
+   max-width: initial;
+   padding: 0;
+}
+
+.titulo_intro,
+.txt_intro {
+   color: #ffffff;
+   letter-spacing: 0.2rem;
+}

@@ -1,0 +1,15 @@
+.form-control:focus::-webkit-input-placeholder {
+   color: transparent;
+}
+
+a {
+   text-decoration: none;
+}
+
+.link_contato:hover {
+   text-decoration: underline;
+}
+
+a h6 {
+   color: #000;
+}
