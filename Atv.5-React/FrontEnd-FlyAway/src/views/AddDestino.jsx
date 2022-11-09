@@ -4,21 +4,20 @@ import axios from 'axios';
 
 export default function AddDestino() {
 
-   const navigate = useNavigate();
 
-   const [nomeDestino, setNomeDestino] = useState('');
-   const [infoDestino, setInfoDestino] = useState('');
+   const [nome_destino, setNome_destino] = useState('');
+   const [info_destino, setInfo_destino] = useState('');
 
 
    const salvarDestino = async (e) => {
       e.preventDefault();
-      console.log(nomeDestino, infoDestino);
+      console.log(nome_destino, info_destino);
       await axios.post("http://localhost:8080/flyaway/destinos", {
-         nomeDestino: nomeDestino,
-         infoDestino: infoDestino,
+         nome_destino: nome_destino,
+         info_destino: info_destino,
       }).then((result) => {
          alert("Destino adicionado.")
-         navigate("/Tabela")
+        
       }).catch((erro) => {
          console.log(erro);
       })
@@ -38,8 +37,8 @@ export default function AddDestino() {
                         type="text"
                         className="form-control"
                         id="InputNomeDestino"
-                        value={nomeDestino}
-                        onChange={(e) => setNomeDestino(e.target.value)}
+                        value={nome_destino}
+                        onChange={(e) => setNome_destino(e.target.value)}
                      />
                   </div>
                   <div className="mb-3">
@@ -50,8 +49,8 @@ export default function AddDestino() {
                         type="text"
                         className="form-control"
                         id="inputInfoDestino"
-                        value={infoDestino}
-                        onChange={(e) => setInfoDestino(e.target.value)}
+                        value={info_destino}
+                        onChange={(e) => setInfo_destino(e.target.value)}
                      />
                   </div>
                   <button

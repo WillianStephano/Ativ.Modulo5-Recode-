@@ -15,32 +15,32 @@ import com.registro.service.exception.ObjectNotFoundException;
 public class DestinosService {
 
 	@Autowired
-	private DestinosRepository destRepo;
+	private DestinosRepository destinoRepos;
 	
 	public Destinos findById(Long id) {
-		Optional<Destinos> destinos = destRepo.findById(id);
+		Optional<Destinos> destinos = destinoRepos.findById(id);
 		return destinos.orElseThrow(() -> new ObjectNotFoundException("Objeto com id: " + id + " Não foi encontrado. Tipo: " + Destinos.class.getName()));
 	}
 	
 	public List<Destinos> findAll(){
-		return destRepo.findAll();
+		return destinoRepos.findAll();
 	}
 	
 	public Destinos save(Destinos destinos) {
-		return destRepo.save(destinos);
+		return destinoRepos.save(destinos);
 	}
 	
 	
     public Destinos updateDestinos (Destinos destinos, long id) { 
-    	Destinos destinosExistente = destRepo.findById(id).orElseThrow(
+    	Destinos destinosExistente = destinoRepos.findById(id).orElseThrow(
                 () -> new ObjectNotFoundException("Objeto com id: " + id + " Não foi encontrado. Tipo: " + Destinos.class.getName()));
     	destinosExistente.setNome_destino(destinos.getNome_destino());
-    	destRepo.save(destinosExistente);
+    	destinoRepos.save(destinosExistente);
         return destinosExistente;
     }
 	
 	public void deleteDestinos(Long id) {
-    	destRepo.deleteById(id);
+    	destinoRepos.deleteById(id);
     }
 
 	
